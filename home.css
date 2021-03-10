@@ -2,13 +2,13 @@ body {
   background-color: #0e2433;
 }
 
-h1 {
+.title h1 {
   margin-top: 60px;
   margin-bottom: 20px;
   color: whitesmoke;
 }
 
-h5 {
+.title h5 {
   margin-bottom: 70px;
   font-size: 20px;
   color: gainsboro;
@@ -23,7 +23,7 @@ h5 {
 .nav-left a {
   font-size: 2em;
   color: green;
-  border: 0.1em solid black;
+  border: 0.13em solid black;
   line-height: 1.1em;
   padding: 10px 7px 5px 5px;
   background-color: orange;
@@ -46,6 +46,7 @@ li {
 .mydetails {
   float: left;
   color: gainsboro;
+  width: 80%;
 }
 
 .profile ul,
@@ -57,4 +58,12 @@ li {
 
 .profile p {
   color: gainsboro;
+}
+
+.contact {
+  margin-top: 50px;
+}
+
+.copyright {
+  text-align: center;
 }
