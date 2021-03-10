@@ -3,12 +3,16 @@ body {
 }
 
 h1 {
-  margin-top: 50px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  color: whitesmoke;
 }
 
-h1,
-h4 {
-  color: whitesmoke;
+h5 {
+  margin-bottom: 70px;
+  font-size: 20px;
+  color: gainsboro;
+  font-weight: lighter;
 }
 
 .navbar {
@@ -16,10 +20,10 @@ h4 {
   margin-top: 15px;
 }
 
-.nav-left p {
+.nav-left a {
   font-size: 2em;
   color: green;
-  border: 0.15em solid orange;
+  border: 0.1em solid black;
   line-height: 1.1em;
   padding: 10px 7px 5px 5px;
   background-color: orange;
@@ -31,4 +35,26 @@ li {
   display: flex;
   flex-wrap: nowrap;
   padding-right: 25px;
+}
+
+/* hr { 
+  align-self: center;
+  color: rgb(247, 243, 243);
+}
+*/
+
+.mydetails {
+  float: left;
+  color: gainsboro;
+}
+
+.profile ul,
+li {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+}
+
+.profile p {
+  color: gainsboro;
 }
