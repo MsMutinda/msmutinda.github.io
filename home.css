@@ -83,8 +83,11 @@ li {
   color: gainsboro;
 }
 
-.contact {
-  margin-top: 50px;
+.contact input,
+textarea,
+button {
+  width: 70em;
+  border-radius: 8px;
 }
 
 .copyright {
