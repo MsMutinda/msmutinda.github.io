@@ -1,6 +1,8 @@
 /*@media (min-width: 1200px) {*/
-.container {
-  width: 3em;
+.container-fluid {
+  position: absolute;
+  left: 10%;
+  width: 98%;
 }
 /*}*/
 
@@ -9,8 +11,14 @@ body {
   font-family: FontAwesome;
 }
 
-.container {
-  width: 80%;
+.box:hover {
+  box-shadow: 0 0 2px 2px #fff;
+  border-radius: 8px;
+}
+
+.title {
+  position: relative;
+  right: 10%;
 }
 
 .title h1 {
@@ -46,14 +54,8 @@ li {
   list-style: none;
   display: flex;
   flex-wrap: nowrap;
-  padding-right: 25px;
+  padding: 0.8em;
 }
-
-/* hr { 
-  align-self: center;
-  color: rgb(247, 243, 243);
-}
-*/
 
 .mydetails {
   float: left;
@@ -68,7 +70,6 @@ li {
 
 .col {
   margin-right: 50px;
-  box-shadow: papayawhip;
 }
 
 .profile ul,
@@ -88,4 +89,13 @@ li {
 
 .copyright {
   text-align: center;
+}
+
+.portfolio p {
+  color: rgb(56, 54, 54);
+}
+
+.portfolio .row {
+  position: relative;
+  left: 30px;
 }
