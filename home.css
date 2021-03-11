@@ -1,3 +1,9 @@
+/*@media (min-width: 1200px) {*/
+.container {
+  width: 3em;
+}
+/*}*/
+
 body {
   background-color: #0e2433;
   font-family: FontAwesome;
@@ -27,6 +33,7 @@ body {
 
 .nav-left a {
   font-size: 2em;
+  font-family: cursive;
   color: green;
   border: 0.1em solid black;
   line-height: 1.1em;
@@ -57,6 +64,11 @@ li {
 .row {
   position: relative;
   left: 13px;
+}
+
+.col {
+  margin-right: 50px;
+  box-shadow: papayawhip;
 }
 
 .profile ul,
