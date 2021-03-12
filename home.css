@@ -73,6 +73,22 @@ li {
   margin-right: 50px;
 }
 
+.skills .col-md-5 {
+  border: 2px solid rgb(112, 104, 95);
+  border-radius: 5px;
+  padding: 20px;
+  position: relative;
+  left: 15px;
+  margin: 20px 50px 20px 0;
+}
+/* 
+.work .col-md-4,
+.education .col-md-4 {
+  border-radius: 5px;
+  padding: 15px;
+  margin: 12px;
+}
+ */
 .profile ul,
 li {
   display: flex;
@@ -122,7 +138,7 @@ button {
 }
 
 .fa-twitter {
-  color: 00acee;
+  color: #00acee;
 }
 
 .fa-github {
