@@ -1,11 +1,51 @@
 <?php
-    if($_POST["submit"]) {
-        $recipient = "mutindajulie2@gmail.com";
-        $subject = "Form to email message";
-        $sender = $_POST['name'];
-        $sender_email = $_POST['email'];
-        $body = $_POST["message"];
-        mail($recipient, $subject, "From: $sender <$senderEmail>");
-        $thankYou="<p>Thank you! Your message has been sent.</p>";
-    }    
+    //collect the data
+    if(!isset($_POST['submit'])) {
+        echo 'error: You need to submit the form';
+    }
+    $name = $_POST['name'];
+    $sender_email = $_POST['email'];
+    $message = $_POST['message'];
+    //validate - invalid fields
+    if(empty($name)||empty($sender_email)) {
+        echo "Please fill in your name and email address";
+        exit;
+    }
+    //validate - injected input
+    if(IsInjected($visitor_email)) {
+    echo "Bad email value!";
+    exit;
+    }
+    //set variables
+    $recipient = "mutindajulie2@gmail.com";
+    $email_subject = "Portfolio website message";
+    $email_body = "New message from $name\n"
+                   "Email address: $sender_email\n"
+                   "Message: $message";
+    $to = 'mutindajulie2@gmail.com';
+    $headers = "From $sender_email \r\n";
+    //send email
+    mail($to, $email_subject, $email_body, $headers);
+    //send success message for user
+    header('Location: thank-you.html');
+    //validate - injected input
+    function IsInjected($str) {
+        $injections = array('(\n+)',
+                    '(\r+)',
+                    '(\t+)',
+                    '(%0A+)',
+                    '(%0D+)',
+                    '(%08+)',
+                    '(%09+)'
+                    );
+        $inject = join('|', $injections);
+        $inject = "/$inject/i";
+        if(preg_match($inject,$str)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+        }
+
 ?>

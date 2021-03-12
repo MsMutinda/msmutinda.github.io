@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <link href="home.css" rel="stylesheet">
     <title>Juliet Mutinda</title>
 </head>
@@ -20,7 +19,7 @@
                     <li class='box'> <a href="#">Home</a> </li>
                     <li class='box'> <a href='#'>Profile</a> </li>
                     <li class='box'> <a href='#'>Resume</a> </li>
-                    <li class='box'> <a href='#'> Portfolio </a></li>
+                    <li class='box'> <a href='#'>Portfolio</a></li>
                     <li class='box'> <a href='#'>Contact</a> </li>
                 </ul>
             </nav>
@@ -33,7 +32,6 @@
                     <h5> Junior Full Stack Software Developer </h5>
             </div>
 
-            <!--  <hr>  -->
             <h4> Animate mydetails part using js/css - set to appear as you scroll) </h4>
             <div class='mydetails'>            
                 <div class='profile'>
@@ -74,13 +72,6 @@
                     <div class='row'> 
                         <div class='col-md-5'>Skilled leader with the ability to coordinate a team towards achieving a set goal.</div>
                         <div class='col-md-5'>Strong communication skills </div>
-                
-                </div>
-                <br><br>
-
-                <div class='achieve'>
-                    <h3>Accomplishments</h3>
-                    <p> (Same as portfolio section) </p>
                 </div>
                 <br><br>
 
@@ -183,28 +174,35 @@
                 <br><br>
 
                 <div class='portfolio'>
-                    <h3>Portfolio (Add details for each) </h3>
-                    <div class='row'>
-                        <p class='col shadow-lg bg-light p-5 mb-5 rounded'>Year 4 project</p>
-                        <p class='col shadow-lg bg-light p-5 mb-5 rounded'>Django girls personal blog</p>
-                    </div>
-                    <div class='row'>
-                        <p class='col shadow-lg bg-light p-5 mb-5 rounded'>Covid app from Goldman assessment</p>
-                        <p class='col shadow-lg bg-light p-5 mb-5 rounded'>My portfolio</p>
-                    </div>
+                    <h3>Portfolio (Add details for each)</h3>
+                        <div class='row'>
+                            <p class='col shadow-lg bg-light p-5 mb-5 rounded'>Year 4 project</p>
+                            <p class='col shadow-lg bg-light p-5 mb-5 rounded'>Django girls personal blog</p>
+                        </div>
+                        <div class='row'>
+                            <p class='col shadow-lg bg-light p-5 mb-5 rounded'>Covid app from Goldman assessment</p>
+                            <p class='col shadow-lg bg-light p-5 mb-5 rounded'>My portfolio</p>
+                        </div>
                 </div>
                 <br><br>
 
                 <div class='contact'>
                     <h2 class='text-center'>Interested in working together?</h2>
                     <h4> Send me a message </h4>
-                    <form action='email.php' method='POST'>
-                        <label>Your Name: </label>
-                        <input type=text name='name' style='padding: 18px;'> <br>
-                        <label>Your Email: </label>
-                        <input type=email name='email' style='padding: 18px;'> <br>
-                        <label>Message: </label><textarea name='message' rows='8' columns='15'></textarea> <br><br>
-                         <button type='submit' name='submit' style='width: 65px; padding: 4px;'> Send </button>   
+                    <form method='post' name='emailform' action='email.php'>
+                        <p> 
+                            <label for='name'>Your Name: </label>
+                            <input type=text name='name' style='padding: 15px;'>
+                        </p>
+                        <p>
+                            <label for='email'>Your Email address: </label>
+                            <input type=email name='email' style='padding: 18px;'>
+                        </p>
+                        <p>
+                            <label for='message'>Message: </label>
+                            <textarea name='message' rows='8' columns='15'></textarea> <br><br>
+                        </p>
+                        <input type='submit' name='submit' value='submit' class='in' style='width: 65px; padding: 4px;'>   
                         </form>
                             <br> <br>
                     <p> Alternatively, feel free to reach out to me via the following: </p> 
@@ -220,6 +218,7 @@
 
             </div>
     </div>
+    
     <script src="home.js"></script>
 </body>
 </html>

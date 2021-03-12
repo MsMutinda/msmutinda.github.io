@@ -48,6 +48,14 @@ body {
   line-height: 1.1em;
   padding: 10px 7px 5px 5px;
   background-color: orange;
+  display: inline-block;
+  animation: rotate 2.2s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(180deg);
+  }
 }
 
 .nav-right ul,
@@ -73,6 +81,11 @@ li {
   margin-right: 50px;
 }
 
+.education div,
+.experience div {
+  animation: alternate;
+}
+
 .skills .col-md-5 {
   border: 2px solid rgb(112, 104, 95);
   border-radius: 5px;
@@ -94,13 +107,12 @@ li {
 }
 
 .contact input,
-textarea,
-button {
+textarea {
   width: 70em;
   border-radius: 8px;
 }
 
-button:hover {
+.in:hover {
   box-shadow: 0 0 1px 1px #fff;
   color: white;
 }
