@@ -152,7 +152,7 @@
                     <h3>Work/Volunteer Experience</h3>
                     <div class='row'>
                         <p class='col-md-4'>
-                            <b>November 2020 – January 2020, <br> LakeHub Academy</b> 
+                            <b>November 2020 – January 2021, <br> LakeHub Academy</b> 
                         </p>
                         <p class='col'>
                             Student Mentor Volunteer to guide the Loop 6.0 learners during their journey in learning
@@ -198,10 +198,14 @@
                 <div class='contact'>
                     <h2 class='text-center'>Interested in working together?</h2>
                     <h4> Send me a message </h4>
-                        <p>Your Name: </p>
-                        <input type=text style='padding: 18px;'> <br>
-                        <p>Message: <br> <textarea name='message' rows='8' columns='15'></textarea> <br><br>
-                         <button type='submit' style='width: 65px; padding: 4px;'> Send </button>   
+                    <form action='email.php' method='POST'>
+                        <label>Your Name: </label>
+                        <input type=text name='name' style='padding: 18px;'> <br>
+                        <label>Your Email: </label>
+                        <input type=email name='email' style='padding: 18px;'> <br>
+                        <label>Message: </label><textarea name='message' rows='8' columns='15'></textarea> <br><br>
+                         <button type='submit' name='submit' style='width: 65px; padding: 4px;'> Send </button>   
+                        </form>
                             <br> <br>
                     <p> Alternatively, feel free to reach out to me via the following: </p> 
                         <ul>

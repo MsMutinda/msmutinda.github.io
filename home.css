@@ -81,14 +81,7 @@ li {
   left: 15px;
   margin: 20px 50px 20px 0;
 }
-/* 
-.work .col-md-4,
-.education .col-md-4 {
-  border-radius: 5px;
-  padding: 15px;
-  margin: 12px;
-}
- */
+
 .profile ul,
 li {
   display: flex;
@@ -105,6 +98,11 @@ textarea,
 button {
   width: 70em;
   border-radius: 8px;
+}
+
+button:hover {
+  box-shadow: 0 0 1px 1px #fff;
+  color: white;
 }
 
 .contact a,
