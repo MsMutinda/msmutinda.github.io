@@ -159,12 +159,16 @@ textarea {
   color: rgb(15, 171, 223);
 }
 
+/*
+Experience and education animations 
+*/
+
 /* Responsiveness
 */
 @media (max-width: 800px) {
   .nav-right ul,
   li {
-    padding: 0.5em;
+    padding: 0.3em;
     position: relative;
     top: 5px;
   }
