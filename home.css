@@ -165,6 +165,7 @@ Experience and education animations
   li {
     padding: 0.4em;
     position: relative;
+    top: 15px;
     left: 15px;
   }
 
