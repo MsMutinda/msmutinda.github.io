@@ -161,7 +161,7 @@ textarea {
 
 /* Responsiveness
 */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .nav-right ul,
   li {
     padding: 0.5em;
@@ -171,7 +171,7 @@ textarea {
 
   .portfolio p,
   .work p,
-  .skills .col-md-5,
+  .col-md-5,
   .education p {
     position: relative;
     right: 25px;
