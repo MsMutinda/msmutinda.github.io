@@ -27,6 +27,13 @@
     $headers = "From $sender_email \r\n";
     //send email
     mail($to, $email_subject, $email_body, $headers);
+    //mail sent response
+    if(mail($to, $email_subject, $email_body, $headers)){
+        echo "Message sent successfully";
+    }
+    else {
+        echo "Not sent";
+    }
     //send success message for user
     header('Location: thank-you.html');
     /* //validate - injected input

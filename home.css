@@ -81,11 +81,11 @@ li {
   margin-right: 50px;
 }
 
-.education div,
+/* .education div,
 .experience div {
   animation: alternate;
 }
-
+ */
 .skills .col-md-5 {
   border: 2px solid rgb(112, 104, 95);
   border-radius: 5px;
@@ -154,6 +154,31 @@ textarea {
 .fa-github {
   color: white;
 }
+
 .fa-phone {
   color: rgb(15, 171, 223);
+}
+
+/* Responsiveness
+*/
+@media (max-width: 600px) {
+  .nav-right ul,
+  li {
+    padding: 0.5em;
+    position: relative;
+    top: 5px;
+  }
+
+  .portfolio p,
+  .work p,
+  .skills .col-md-5,
+  .education p {
+    position: relative;
+    right: 25px;
+  }
+
+  .contact input,
+  .contact textarea {
+    width: 28em;
+  }
 }
