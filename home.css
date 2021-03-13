@@ -165,12 +165,11 @@ Experience and education animations
   li {
     padding: 0.4em;
     position: relative;
+    bottom: 20px;
     left: 15px;
   }
 
   .nav-left a {
-    position: relative;
-    top: 30px;
     line-height: 0.7em;
   }
 
