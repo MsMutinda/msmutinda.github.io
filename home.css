@@ -161,6 +161,9 @@ Experience and education animations
 /* Responsiveness
 */
 @media (max-width: 800px) {
+  body {
+    overflow-x: scroll;
+  }
   .nav-right ul,
   li {
     padding: 0.3em;
