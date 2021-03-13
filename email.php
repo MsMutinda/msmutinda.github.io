@@ -1,8 +1,9 @@
 <?php
-    //collect the data
+//page cannot be accessed directly
     if(!isset($_POST['submit'])) {
         echo 'error: You need to submit the form';
     }
+    //collect the data
     $name = $_POST['name'];
     $sender_email = $_POST['email'];
     $message = $_POST['message'];
@@ -19,8 +20,8 @@
     //set variables
     $recipient = "mutindajulie2@gmail.com";
     $email_subject = "Portfolio website message";
-    $email_body = "New message from $name\n"
-                   "Email address: $sender_email\n"
+    $email_body = "New message from $name \n";
+                   "Email address: $sender_email \n";
                    "Message: $message";
     $to = 'mutindajulie2@gmail.com';
     $headers = "From $sender_email \r\n";
@@ -28,7 +29,7 @@
     mail($to, $email_subject, $email_body, $headers);
     //send success message for user
     header('Location: thank-you.html');
-    //validate - injected input
+    /* //validate - injected input
     function IsInjected($str) {
         $injections = array('(\n+)',
                     '(\r+)',
@@ -47,5 +48,5 @@
             return false;
         }
         }
-
+ */
 ?>
