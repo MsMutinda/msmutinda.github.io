@@ -81,11 +81,6 @@ li {
   margin-right: 50px;
 }
 
-/* .education div,
-.experience div {
-  animation: alternate;
-}
- */
 .skills .col-md-5 {
   border: 2px solid rgb(112, 104, 95);
   border-radius: 5px;
@@ -168,9 +163,15 @@ Experience and education animations
 @media (max-width: 800px) {
   .nav-right ul,
   li {
-    padding: 0.3em;
+    padding: 0.4em;
     position: relative;
-    top: 5px;
+    left: 15px;
+  }
+
+  .nav-left a {
+    position: relative;
+    top: 30px;
+    line-height: 0.7em;
   }
 
   .portfolio p,
@@ -183,6 +184,6 @@ Experience and education animations
 
   .contact input,
   .contact textarea {
-    width: 28em;
+    width: 25em;
   }
 }
