@@ -1,7 +1,7 @@
 <?php
 //page cannot be accessed directly
     if(!isset($_POST['submit'])) {
-        echo 'error: You need to submit the form';
+        echo 'Error: You need to submit the form';
     }
     //collect the data
     else {
@@ -13,11 +13,13 @@
             echo "Please fill in your name and email address";
             exit;
         }
-        //validate - injected input
+
+        /* //validate - injected input
         if(IsInjected($visitor_email)) {
         echo "Bad email value!";
         exit;
-        }
+        } */
+
         //set variables
         $recipient = "mutindajulie2@gmail.com";
         $email_subject = "Portfolio website message";
@@ -37,6 +39,7 @@
         }
         //send success message for user
         header('Location: thank-you.html');
+        
         /* //validate - injected input
         function IsInjected($str) {
             $injections = array('(\n+)',
@@ -57,5 +60,6 @@
             }
             }
     */
+
     }
 ?>

@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="home.css" rel="stylesheet">
     <title>Juliet Mutinda</title>
+    <script>
+        function del() {
+            document.getElementByName('name').value=null; 
+            document.getElementByName('email').value=''; 
+            document.getElementByName('message').value=''; 
+        }
+    </script>
 </head>
 <body>
         <div class='navbar'>
@@ -18,10 +25,10 @@
             <nav class='nav-right'>
                 <ul>
                     <li class='box'> <a href="#">Home</a> </li>
-                    <li class='box'> <a href='#'>Profile</a> </li>
-                    <li class='box'> <a href='#'>Resume</a> </li>
-                    <li class='box'> <a href='#'>Portfolio</a></li>
-                    <li class='box'> <a href='#'>Contact</a> </li>
+                    <li class='box'> <a href='#about'>Profile</a> </li>
+                    <li class='box'> <a href='#resume'>Resume</a> </li>
+                    <li class='box'> <a href='#portfolio'>Portfolio</a></li>
+                    <li class='box'> <a href='#contact'>Contact</a> </li>
                 </ul>
             </nav>
         </div>
@@ -33,147 +40,151 @@
                     <h5> Junior Full Stack Software Developer </h5>
             </div>
 
-            <div class='mydetails'>            
-                <div class='profile'>
-                    <h3>About me</h3>
-                    <p>
-                    I am a software engineering graduate who has had significant experience learning from and
-                    working with companies keen on driving change through the implementation of smart and
-                    scalable software solutions. 
-                    Self-motivated individual who can build software products
-                    customized to satisfy specific client needs for optimal usage experience. I am always willing and eager to
-                    learn in situations where I might be lacking in a technical or professional regard.
-                    One of my goals is to remain updated on the latest software trends and technologies. I am also enthusiastic
-                    about cyber security, and have a background in ethical hacking/penetration testing and
-                    network security. 
-                    </p>
-                </div>
-                <br> <br>
-                
-                <div class='skills'>
-                    <h3>Skills Highlight</h3>
-                    <div class='row'>
-                        <div class='col-md-5'> Full Stack JavaScript development including software tools such as HTML, CSS, Bootstrap,
-                        Node.js, React.js </div>
-                        <div class='col-md-5'> Development with the Django framework using Python </div>
-                    </div>
-
-                    <div class='row'>
-                        <div class='col-md-5'> Data processing and manipulation using python machine learning modules such as pandas,
-                        scikit-learn, matplotlib, and numpy, among others. </div>
-                        <div class='col-md-5'>Solid understanding of data structures and algorithms </div>
-                    </div>
-
-                    <div class='row'>
-                        <div class='col-md-5'>Working with Git, MongoDB, and MySQL </div>
-                        <div class='col-md-5'>Adaptable to changing situations </div>
-                    </div>
-
-                    <div class='row'> 
-                        <div class='col-md-5'>Skilled leader with the ability to coordinate a team towards achieving a set goal.</div>
-                        <div class='col-md-5'>Strong communication skills </div>
-                </div>
-                <br><br>
-
-                <div class='education'>
-                    <h3>Education</h3>
-                    <div class='row'>
-                        <p class='col-md-4' data-aos='slide-right' data-aos-easing = 'ease-in'>
-                            <b>August 2020 – November 2020, <br> Popote Learning</b> 
-                        </p>
-                        <p class='col' data-aos='slide-left' data-aos-easing = 'ease-in'>
-                            Professional skills training to complement the technical skills training
-                            provided by LakeHub Academy, for an increased success rate in career
-                            development.
-                        </p>
-                    </div><br>
-
-                    <div class='row'>
-                    <p class='col-md-4' data-aos='slide-right' data-aos-easing = 'ease-in'>
-                        <b>July 2020 – October 2020, <br> LakeHub Academy</b>
-                    </p>
-                    <p class='col' data-aos='slide-left' data-aos-easing = 'ease-in'>
-                        Training program on Full Stack JavaScript development<br>
-                        Learning focused on acquiring skills in both the frontend and backend tiers of
-                        web application development with a backbone in the JavaScript language.
-                    </p>
-                    </div><br>
-
-                    <div class='row'>
-                        <p class='col-md-4' data-aos='slide-right' data-aos-easing = 'ease-in'>
-                            <b>July 2020 – September 2020, <br> Cyberroam Africa</b>
-                        </p>
-                        <p class='col' data-aos='slide-left' data-aos-easing = 'ease-in'>
-                            Training on Certified Ethical Hacking/Penetration Testing.
-                            Certificate of Training issued October 2020.<br>
-                            Acquired skills and understanding on information reconnaissance/footprinting,
-                            scanning/enumeration, up to where exploitation is done, and finally how to
-                            cover tracks after system infiltration/attack.
-                        </p>
-                    </div> <br>
-
-                    <div class='row'>
-                        <p class='col-md-4' data-aos='slide-right' data-aos-easing = 'ease-in'>
-                            <b>ICSI (International CyberSecurity Institute), UK <br>
-                            ICSI | CNSS Certified Network Security Specialist</b>
-                        </p>
-                        <p class='col' data-aos='slide-left' data-aos-easing = 'ease-in'>
-                            Certificate of completion issued July 2020<br>
-                            Acquired a comprehensive understanding of network security including
-                            concepts such as Operating System hardening, firewalls, Intrusion
-                            Detection/Prevention systems, encryption, and security policies, among other
-                            issues.
-                        </p>
-                    </div><br>
-
-                    <div class='row'>
-                        <p class='col-md-4' data-aos='slide-right' data-aos-easing = 'ease-in'>
-                            <b>August 2016 – December 2020, <br>Multimedia University of Kenya</b>
-                        </p>
-                        <p class='col' data-aos='slide-left' data-aos-easing = 'ease-in'>
-                            Bachelor of Science in Software Engineering, awarded in December 2020<br>
-                            Graduated with Second Class Honors (Upper Division)
-                        </p>
-                    </div><br>
-
-                </div>
-                <br><br>
-
-                <div class='work'>
-                    <h3>Work/Volunteer Experience</h3>
-                    <div class='row'>
-                        <p class='col-md-4' data-aos='slide-right' data-aos-easing = 'ease-in'>
-                            <b>November 2020 – January 2021, <br> LakeHub Academy</b> 
-                        </p>
-                        <p class='col' data-aos='slide-left' data-aos-easing = 'ease-in'>
-                            Student Mentor Volunteer to guide the Loop 6.0 learners during their journey in learning
-                            and implementing concepts on full stack JavaScript development.
-                            Participated in daily stand up meetings where discussions and project implementations
-                            were done on a per-team basis.
+            <a id='about'>
+                <div class='mydetails'>            
+                    <div class='profile'>
+                        <h3>About me</h3>
+                        <p>
+                        I am a software engineering graduate who has had significant experience learning from and
+                        working with companies keen on driving change through the implementation of smart and
+                        scalable software solutions. 
+                        Self-motivated individual who can build software products
+                        customized to satisfy specific client needs for optimal usage experience. I am always willing and eager to
+                        learn in situations where I might be lacking in a technical or professional regard.
+                        One of my goals is to remain updated on the latest software trends and technologies. I am also enthusiastic
+                        about cyber security, and have a background in ethical hacking/penetration testing and
+                        network security. 
                         </p>
                     </div>
-                    <br>
-                    <div class='row'>
-                        <p class='col-md-4' data-aos='slide-right' data-aos-easing = 'ease-in'>
-                            <b>June 2019 – August 2019, <br> Embu County Government Headquarters</b> 
-                        </p>
-                        <p class='col' data-aos='slide-left' data-aos-easing = 'ease-in' data-aos-duration = ''>
-                            Worked among a team of IT interns responsible for;<br>
-                        --> Networking and administration, where tasks such as router configuration, ethernet cable
-                            termination, and network troubleshooting, were performed.<br><br>
-                        --> Documents and data handling – involved updating the county projects’ website through
-                            data uploads on county budget essentials, and the analysis and validation of test data for
-                            JamboPay and Revenue data.<br><br>
-                        --> Helpdesk and troubleshooting – software installation and network patch
-                            updates on the county local area network, computer hardware maintenance for
-                            different staff in various offices, and retrieving payslips for county staff via
-                            the Government Human Resource System (GHRIS).
-                    </p>
-                    </div>
-                </div>
-                <br><br>
+                    <br> <br>
+                    
+                    <div class='skills'>
+                        <h3>Skills Highlight</h3>
+                        <div class='row'>
+                            <div class='col-md-5'> Full Stack JavaScript development including software tools such as HTML, CSS, Bootstrap,
+                            Node.js, React.js </div>
+                            <div class='col-md-5'> Development with the Django framework using Python </div>
+                        </div>
 
-                <div class='portfolio'>
+                        <div class='row'>
+                            <div class='col-md-5'> Data processing and manipulation using python machine learning modules such as pandas,
+                            scikit-learn, matplotlib, and numpy, among others. </div>
+                            <div class='col-md-5'>Solid understanding of data structures and algorithms </div>
+                        </div>
+
+                        <div class='row'>
+                            <div class='col-md-5'>Working with Git, MongoDB, and MySQL </div>
+                            <div class='col-md-5'>Adaptable to changing situations </div>
+                        </div>
+
+                        <div class='row'> 
+                            <div class='col-md-5'>Skilled leader with the ability to coordinate a team towards achieving a set goal.</div>
+                            <div class='col-md-5'>Strong communication skills </div>
+                    </div>
+                    </a>
+                    <br><br>
+
+                    <a id='resume'>
+                    <div class='education'>
+                        <h3>Education</h3>
+                        <div class='row'>
+                            <p class='col-md-4' data-aos='slide-right' data-aos-easing = 'ease-in'>
+                                <b>August 2020 – November 2020, <br> Popote Learning</b> 
+                            </p>
+                            <p class='col' data-aos='slide-left' data-aos-easing = 'ease-in'>
+                                Professional skills training to complement the technical skills training
+                                provided by LakeHub Academy, for an increased success rate in career
+                                development.
+                            </p>
+                        </div><br>
+
+                        <div class='row'>
+                        <p class='col-md-4' data-aos='slide-right' data-aos-easing = 'ease-in'>
+                            <b>July 2020 – October 2020, <br> LakeHub Academy</b>
+                        </p>
+                        <p class='col' data-aos='slide-left' data-aos-easing = 'ease-in'>
+                            Training program on Full Stack JavaScript development<br>
+                            Learning focused on acquiring skills in both the frontend and backend tiers of
+                            web application development with a backbone in the JavaScript language.
+                        </p>
+                        </div><br>
+
+                        <div class='row'>
+                            <p class='col-md-4' data-aos='slide-right' data-aos-easing = 'ease-in'>
+                                <b>July 2020 – September 2020, <br> Cyberroam Africa</b>
+                            </p>
+                            <p class='col' data-aos='slide-left' data-aos-easing = 'ease-in'>
+                                Training on Certified Ethical Hacking/Penetration Testing.
+                                Certificate of Training issued October 2020.<br>
+                                Acquired skills and understanding on information reconnaissance/footprinting,
+                                scanning/enumeration, up to where exploitation is done, and finally how to
+                                cover tracks after system infiltration/attack.
+                            </p>
+                        </div> <br>
+
+                        <div class='row'>
+                            <p class='col-md-4' data-aos='slide-right' data-aos-easing = 'ease-in'>
+                                <b>ICSI (International CyberSecurity Institute), UK <br>
+                                ICSI | CNSS Certified Network Security Specialist</b>
+                            </p>
+                            <p class='col' data-aos='slide-left' data-aos-easing = 'ease-in'>
+                                Certificate of completion issued July 2020<br>
+                                Acquired a comprehensive understanding of network security including
+                                concepts such as Operating System hardening, firewalls, Intrusion
+                                Detection/Prevention systems, encryption, and security policies, among other
+                                issues.
+                            </p>
+                        </div><br>
+
+                        <div class='row'>
+                            <p class='col-md-4' data-aos='slide-right' data-aos-easing = 'ease-in'>
+                                <b>August 2016 – December 2020, <br>Multimedia University of Kenya</b>
+                            </p>
+                            <p class='col' data-aos='slide-left' data-aos-easing = 'ease-in'>
+                                Bachelor of Science in Software Engineering, awarded in December 2020<br>
+                                Graduated with Second Class Honors (Upper Division)
+                            </p>
+                        </div><br>
+
+                    </div>
+                    <br><br>
+
+                    <div class='work'>
+                        <h3>Work/Volunteer Experience</h3>
+                        <div class='row'>
+                            <p class='col-md-4' data-aos='slide-right' data-aos-easing = 'ease-in'>
+                                <b>November 2020 – January 2021, <br> LakeHub Academy</b> 
+                            </p>
+                            <p class='col' data-aos='slide-left' data-aos-easing = 'ease-in'>
+                                Student Mentor Volunteer to guide the Loop 6.0 learners during their journey in learning
+                                and implementing concepts on full stack JavaScript development.
+                                Participated in daily stand up meetings where discussions and project implementations
+                                were done on a per-team basis.
+                            </p>
+                        </div>
+                        <br>
+                        <div class='row'>
+                            <p class='col-md-4' data-aos='slide-right' data-aos-easing = 'ease-in'>
+                                <b>June 2019 – August 2019, <br> Embu County Government Headquarters</b> 
+                            </p>
+                            <p class='col' data-aos='slide-left' data-aos-easing = 'ease-in' data-aos-duration = ''>
+                                Worked among a team of IT interns responsible for;<br>
+                            --> Networking and administration, where tasks such as router configuration, ethernet cable
+                                termination, and network troubleshooting, were performed.<br><br>
+                            --> Documents and data handling – involved updating the county projects’ website through
+                                data uploads on county budget essentials, and the analysis and validation of test data for
+                                JamboPay and Revenue data.<br><br>
+                            --> Helpdesk and troubleshooting – software installation and network patch
+                                updates on the county local area network, computer hardware maintenance for
+                                different staff in various offices, and retrieving payslips for county staff via
+                                the Government Human Resource System (GHRIS).
+                        </p>
+                        </div>
+                    </div>
+                    </a>
+                    <br><br>
+
+                <div class='portfolio' id='portfolio'>
                     <h3>Portfolio (Add details for each)</h3>
                         <div class='row'>
                             <p class='col shadow-lg bg-light p-5 mb-5 rounded'>Year 4 project</p>
@@ -186,10 +197,11 @@
                 </div>
                 <br><br>
 
-                <div class='contact'>
+                <div class='contact' id='contact'>
                     <h2 class='text-center'>Interested in working together?</h2>
                     <h4> Send me a message </h4>
-                    <form method='post' name='emailform' action='email.php'>
+                    <form method='post' name='emailform' action='https://formspree.io/f/xoqpgkjj'>
+                        <!-- <form method='post' name='emailform' action='email.php'> -->
                         <p> 
                             <label for='name'>Your Name: </label>
                             <input type=text name='name' style='padding: 15px;'>
@@ -202,7 +214,7 @@
                             <label for='message'>Message: </label>
                             <textarea name='message' rows='8'></textarea> <br><br>
                         </p>
-                        <input type='submit' name='submit' value='submit' class='in' style='width: 65px; padding: 4px;'>   
+                        <input type='submit' name='submit' value='submit' class='in' onclick='del()' style='width: 65px; padding: 4px;'>   
                         </form>
                             <br> <br>
                     <p> Alternatively, feel free to reach out to me via the following: </p> 

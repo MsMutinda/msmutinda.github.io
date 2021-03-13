@@ -1,0 +1,5 @@
+{
+    "php.validate.executablePath": "/usr/bin/php7.4",
+    "phpserver.phpConfigPath": "/opt/lampp/etc/php.ini",
+    "phpserver.phpPath": "/usr/bin/php7.4"
+}
