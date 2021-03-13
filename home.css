@@ -164,15 +164,22 @@ Experience and education animations
   .nav-right ul,
   li {
     padding: 0.3em;
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
-    left: 15px;
+    bottom: 10px;
+    left: 18px;
+  }
+
+  img {
+    width: fit-content;
+    height: fit-content;
   }
 
   .nav-left a {
     position: relative;
     right: 5px;
     top: 22px;
-    line-height: 0.7em;
   }
 
   .portfolio p,
@@ -185,6 +192,6 @@ Experience and education animations
 
   .contact input,
   .contact textarea {
-    width: 25em;
+    width: 18em;
   }
 }
