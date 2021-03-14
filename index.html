@@ -205,8 +205,8 @@
                 <div class='contact' id='contact'>
                     <h2 class='text-center'>Interested in working together?</h2>
                     <h4> Send me a message </h4>
-                    <form method='post' name='emailform' action='https://formspree.io/f/xoqpgkjj'>
-                        <!-- <form method='post' name='emailform' action='email.php'> -->
+                    <!-- <form method='post' name='emailform' action='https://formspree.io/f/xoqpgkjj'> -->
+                        <form method='post' name='emailform' action='email.php'>
                         <p> 
                             <label for='name'>Your Name: </label>
                             <input type=text name='name' style='padding: 15px;'>
@@ -219,17 +219,10 @@
                             <label for='message'>Message: </label>
                             <textarea name='message' rows='8'></textarea> <br><br>
                         </p>
-                        <input type='submit' name='submit' value='submit' class='in' onclick='del()' style='width: 65px; padding: 4px;'>   
-                        </form>
-
-                        <script>
-                            $(window).load(function() {
-                            $('form').children('input:not(#submit)').val('')
-                            })
-                            
-                            </script>
-                            
+                        <input type='submit' name='submit' value='Submit' class='in' style='width: 65px; padding: 4px;'>   
+                        </form>                   
                             <br> <br>
+                            
                     <p> Alternatively, feel free to reach out to me via the following: </p> 
                         <ul>
                             <li> <i class="fa fa-linkedin"> </i><a href="https://www.linkedin.com/in/juliemutinda">LinkedIn </a> </li>
