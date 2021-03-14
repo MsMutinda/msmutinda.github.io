@@ -49,14 +49,14 @@ body {
   padding: 10px 7px 5px 5px;
   background-color: orange;
   display: inline-block;
-  /* animation: rotate 2.2s linear infinite; */
+  animation: rotate 2.2s linear infinite;
 }
 
-/* @keyframes rotate {
+@keyframes rotate {
   to {
     transform: rotate(180deg);
   }
-} */
+}
 
 .nav-right ul,
 li {
