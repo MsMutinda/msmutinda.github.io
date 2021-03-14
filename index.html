@@ -10,13 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="home.css" rel="stylesheet">
     <title>Juliet Mutinda</title>
-    <script>
-        function del() {
-            document.getElementByName('name').value=null; 
-            document.getElementByName('email').value=''; 
-            document.getElementByName('message').value=''; 
-        }
-    </script>
+
 </head>
 <body>
         <div class='navbar'>
@@ -35,7 +29,7 @@
 
         <div class='container-fluid'>
             <div class='title text-center'>
-                <img src='/images/profile.JPEG' width='350em' height='200em'>
+                <!-- <img src='/images/profile.JPEG' width='350em' height='200em'> -->
                 <h1 class='font-weight-bold'> Hi there, I am Juliet Mutinda </h1>
                     <h5> Junior Full Stack Software Developer </h5>
             </div>
@@ -185,7 +179,7 @@
                     <br><br>
 
                 <div class='portfolio' id='portfolio'>
-                    <h3>My Portfolio</h3>
+                    <h3>Portfolio</h3>
                         <div class='row'>
                             <p class='col shadow-lg bg-light p-5 mb-5 rounded'> <i style='font-size:larger;'><b>University project </b></i><br><br>
                                 University final year project on a review verification classifier that helps distinguish between fake and genuine product reviews based on sentiment analysis. 
@@ -227,6 +221,14 @@
                         </p>
                         <input type='submit' name='submit' value='submit' class='in' onclick='del()' style='width: 65px; padding: 4px;'>   
                         </form>
+
+                        <script>
+                            $(window).load(function() {
+                            $('form').children('input:not(#submit)').val('')
+                            })
+                            
+                            </script>
+                            
                             <br> <br>
                     <p> Alternatively, feel free to reach out to me via the following: </p> 
                         <ul>
