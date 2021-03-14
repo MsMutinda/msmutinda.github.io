@@ -158,7 +158,7 @@ textarea {
 */
 @media (max-width: 800px) {
   body {
-    overflow-x: scroll;
+    overflow-x: hidden;
   }
   .nav-right ul,
   li {

@@ -206,23 +206,34 @@
                     <h2 class='text-center'>Interested in working together?</h2>
                     <h4> Send me a message </h4>
                     <!-- <form method='post' name='emailform' action='https://formspree.io/f/xoqpgkjj'> -->
-                        <form method='post' name='emailform' action='email.php'>
+                        <!-- <form method='post' name='emailform' action='email.php'> -->
+                            <form method='post' name='emailform' enctype='text/plain' action='https://docs.google.com/forms/d/e/1FAIpQLSfz7quQ7tgXS-QMxa5-_PiIcEPmK8nLi2bC-NM--FAlJtHCTw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
                         <p> 
                             <label for='name'>Your Name: </label>
-                            <input type=text name='name' style='padding: 15px;'>
-                        </p>
+                                <input type=text name='entry.2005620554' id='entry.2005620554' style='padding: 15px;'>
+                            </p>
                         <p>
                             <label for='email'>Your Email address: </label>
-                            <input type=email name='email' style='padding: 18px;'>
+                            <input type=email name='entry.1045781291' id='entry.1045781291' style='padding: 18px;'>
                         </p>
                         <p>
                             <label for='message'>Message: </label>
-                            <textarea name='message' rows='8'></textarea> <br><br>
+                            <textarea name='entry.1489218646' id='entry.1489218646' rows='8'></textarea> <br><br>
                         </p>
                         <input type='submit' name='submit' value='Submit' class='in' style='width: 65px; padding: 4px;'>   
                         </form>                   
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+
+                        <script src="assets/js/jquery.min.js"></script>
+                        <script type="text/javascript">var submitted=false;</script>
+                        <script type="text/javascript">
+                        $('#gform').on('submit', function(e) {
+                        $('#gform *').fadeOut(2000);
+                        $('#gform').prepend('Your submission has been received');
+                        });
+                        </script>
                             <br> <br>
-                            
+
                     <p> Alternatively, feel free to reach out to me via the following: </p> 
                         <ul>
                             <li> <i class="fa fa-linkedin"> </i><a href="https://www.linkedin.com/in/juliemutinda">LinkedIn </a> </li>
