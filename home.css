@@ -1,20 +1,30 @@
-/*@media (min-width: 1200px) {*/
-.container-fluid {
-  position: absolute;
-  left: 10%;
-  width: 99%;
-}
-/*}*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
   background-color: #0e2433;
-  font-family: FontAwesome;
   overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: gainsboro;
+}
+
+.container {
+  padding: 0;
 }
 
 .box:hover {
   box-shadow: 0 0 2px 2px #fff;
   border-radius: 8px;
+}
+
+hr {
+  border: 1px dashed #eee;
+  margin-top: 6px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin: 0;
 }
 
 .title {
@@ -23,21 +33,22 @@ body {
 }
 
 .title h1 {
-  margin-top: 60px;
+  margin-top: 50px;
   margin-bottom: 20px;
   color: whitesmoke;
 }
 
 .title h5 {
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   font-size: 20px;
   color: gainsboro;
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 .navbar {
   color: white;
-  margin-top: 15px;
+  padding: 10px 5px;
+  margin: 0;
 }
 
 .nav-left a {
@@ -49,7 +60,7 @@ body {
   padding: 10px 7px 5px 5px;
   background-color: orange;
   display: inline-block;
-  /* animation: rotate 2.2s linear infinite; */
+  animation: rotate 2.2s linear infinite;
 }
 
 @keyframes rotate {
@@ -58,47 +69,167 @@ body {
   }
 }
 
-.nav-right ul,
-li {
+.nav-right ul {
   list-style: none;
-  display: flex;
-  flex-wrap: nowrap;
+  padding: 0;
+}
+
+.nav-right ul li {
+  display: inline;
   padding: 0.8em;
 }
 
-.mydetails {
-  float: left;
+
+
+/* About section */
+.about, .skills, .education, .work, .portfolio, .contact {
+  text-align: justify;
+  margin-bottom: 50px;
+}
+
+.about p {
   color: gainsboro;
-  width: 80%;
+  font-size: 15px;
 }
 
-.row {
-  position: relative;
-  left: 13px;
+
+
+/* general */
+.skills > .row,
+.education > .row,
+.work > .row {
+  margin: 0;
 }
 
-.col {
-  margin-right: 50px;
+
+
+/* Skills section */
+.skills .row { 
+  margin: 0;
+  display: flex;
+  flex-direction: row;
 }
 
-.skills .col-md-5 {
+.skills .row div {
+  flex: 1 1 auto;
+  margin: 20px 25px 10px 0;
+  width: 45%;
   border: 2px solid rgb(112, 104, 95);
   border-radius: 5px;
+  font-size: 15px;
   padding: 20px;
+  margin: 10px 30px 10px 0;
+}
+
+.skills .row div:nth-child(even) {
+  flex: 1 1 auto;
+  margin-right: 0 !important;
+  width: 47%;
+}
+
+.skills .skills-header {
+  margin-bottom: 0;
+}
+
+
+
+/* general */
+.education .col-lg-4,
+.work .col-lg-4 {
+  padding-left: 0;
+  text-align: justify;
+}
+
+.education .col-lg-8,
+.work .col-lg-8 {
+  padding-right: 0;
+  text-align: justify;
+}
+
+
+/* Work section */
+.work .row .col-lg-4,
+.work .row .col-lg-8 {
+  margin-bottom: 30px;
+}
+
+.work .row .col-lg-4:nth-child(5),
+.work .row .col-lg-8:nth-child(6) {
+  margin-bottom: 0;
+}
+
+.work .row ul {
+  margin: 0;
+  list-style-position: outside;
+  padding-left: 50px;
+}
+
+.work .row ul p {
   position: relative;
-  left: 15px;
-  margin: 20px 50px 20px 0;
+  right: 35px;
 }
 
-.profile ul,
-li {
+.work ul li {
+  display: list-item;
+}
+
+
+
+/* Portfolio section */
+.portfolio .row { 
+  margin: 0;
   display: flex;
-  flex-wrap: nowrap;
-  list-style: none;
+  flex-direction: row;
 }
 
-.profile p {
-  color: gainsboro;
+.portfolio .row div {
+  flex: 1 1 auto;
+  margin: 20px 25px 10px 0;
+  width: 45%;
+}
+
+.portfolio .row div:nth-child(even) {
+  flex: 1 1 auto;
+  margin-right: 0 !important;
+  margin-bottom: 10px;
+  width: 47%;
+}
+
+.portfolio .row div:nth-child(3),
+.portfolio .row div:nth-child(even) {
+  margin-bottom: 0;
+}
+
+.portfolio h4 {
+  color: #121212;
+}
+
+.portfolio p {
+  color: rgb(56, 54, 54);
+}
+
+.portfolio .row a.btn {
+  border-radius: 10px 8px 5px; 
+  padding: 8px; 
+  margin-top: 10px;
+  color: #121212;
+}
+
+
+
+/* Contact area */
+.contact p {
+  font-size: 16px;
+}
+
+.contact p a {
+  font-weight: 600;
+  position:inherit; 
+  color: #fff;
+}
+
+.contact p a:hover {
+  text-decoration: underline;
 }
 
 .contact input,
@@ -107,30 +238,31 @@ textarea {
   border-radius: 8px;
 }
 
-.in:hover {
-  box-shadow: 0 0 1px 1px #fff;
-  color: white;
+.contact ul {
+  list-style: none;
+  margin: 10px;
 }
 
-.contact a,
-.phone {
-  color: white;
+.contact ul li {
+  padding: 10px;
+}
+
+.contact ul li i {
+  cursor: pointer;
   position: relative;
-  top: 8px;
-  margin-right: 5px;
+  top: 2px;
 }
 
-.portfolio p {
-  color: rgb(56, 54, 54);
+.contact ul li a {
+  color: #eee;
 }
 
-.portfolio .row {
-  position: relative;
-  left: 30px;
+.contact ul li a:hover {
+  font-weight: 600;
 }
 
 .fa {
-  font-size: 30px;
+  font-size: 25px;
   margin-right: 15px;
 }
 
@@ -154,20 +286,36 @@ textarea {
   color: rgb(15, 171, 223);
 }
 
-/* Responsiveness
-*/
-@media (max-width: 800px) {
+
+/* Footer */
+.footer {
+  font-size: 12px;
+  padding: 6px;
+  border-top: 1px dashed ghostwhite;
+}
+
+
+
+
+/* Responsiveness */
+@media screen and (min-width: 280px) and (max-width: 599px) 
+{
   body {
     overflow-x: hidden;
+    padding: 10px;
   }
+
+  .navbar {
+    padding: 0;
+  }
+
+  .nav-right ul {
+    margin: 0;
+  }
+
   .nav-right ul,
   li {
-    padding: 0.3em;
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    bottom: 10px;
-    left: 18px;
+    padding: 0.2em;
   }
 
   img {
@@ -176,21 +324,82 @@ textarea {
   }
 
   .nav-left a {
-    position: relative;
-    right: 5px;
-    top: 22px;
+    animation: none;
   }
 
-  .portfolio p,
-  .work p,
-  .col-md-5,
-  .education p {
+  .title {
+    text-align: center;
     position: relative;
-    right: 25px;
+    right: 10px;
+    top: 30px;
+    margin-bottom: 70px;
   }
 
-  /* .contact input,
-  .contact textarea {
-    width: 22em;
-  } */
+  .title h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .title h5 {
+    font-size: 18px;
+    margin: 10px 0 0 10px;
+  }
+
+  hr {
+    margin: 6px 0 10px;
+  }
+
+  .about, .skills, .education, .work, .portfolio, .contact {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .about p {
+    font-size: 14px;
+  }
+
+  .skills .row {
+    margin-left: 10px;
+    list-style-position: outside;
+    padding-left: 10px;
+  }
+
+  .skills .row div {
+    border: none;
+    width: 100%;
+    padding: 6px;
+    margin: 0;
+    display: list-item;
+  }
+
+  .work .row ul p {
+    position: relative;
+    left: -35px;
+  }
+
+  .portfolio .row div {
+    width: 100%;
+    margin: 15px 0;
+    padding: 15px !important;
+  }
+
+  .portfolio .row div h4 {
+    font-size: 16px;
+  }
+
+  .portfolio .row div p {
+    font-size: 0.7rem;
+  }
+
+  .contact {
+    margin-top: 40px;
+  }
+
+  .contact h2 {
+    font-size: 22px;
+  }
 }
