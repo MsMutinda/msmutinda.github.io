@@ -27,28 +27,9 @@ h3 {
   margin: 0;
 }
 
-.title {
-  text-align: center;
-  position: relative;
-  left: 2%;
-}
-
-.title h1 {
-  margin-top: 50px;
-  margin-bottom: 20px;
-  color: whitesmoke;
-}
-
-.title h5 {
-  margin-bottom: 50px;
-  font-size: 20px;
-  color: gainsboro;
-  font-weight: 300;
-}
 
 .navbar {
-  color: white;
-  padding: 10px 5px;
+  padding: 20px;
   margin: 0;
 }
 
@@ -80,12 +61,30 @@ h3 {
   padding: 0.8em;
 }
 
+.nav-right ul li a {
+  color: #fff;
+}
+
 
 
 /* About section */
-.about, .skills, .education, .work, .portfolio, .contact {
-  text-align: justify;
+.title {
+  text-align: center;
+  position: relative;
+  left: 2%;
+}
+
+.title h1 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: whitesmoke;
+}
+
+.title h5 {
   margin-bottom: 50px;
+  font-size: 20px;
+  color: gainsboro;
+  font-weight: 300;
 }
 
 .about p {
@@ -100,6 +99,11 @@ h3 {
 .education > .row,
 .work > .row {
   margin: 0;
+}
+
+.about, .skills, .education, .work, .portfolio, .contact {
+  text-align: justify;
+  margin-bottom: 50px;
 }
 
 
