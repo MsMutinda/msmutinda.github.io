@@ -28,8 +28,9 @@ h3 {
 }
 
 .title {
+  text-align: center;
   position: relative;
-  right: 10%;
+  left: 2%;
 }
 
 .title h1 {
