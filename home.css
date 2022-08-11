@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
 
 body {
   background-color: #0e2433;
   overflow-x: hidden;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Livvic", sans-serif;
   font-weight: 300;
   color: gainsboro;
 }
@@ -25,6 +26,11 @@ hr {
 
 h3 {
   margin: 0;
+  /* font-family: 'Gochi Hand', cursive; */
+}
+
+label {
+  font-size: 17px !important;
 }
 
 
@@ -89,9 +95,7 @@ h3 {
 
 .about p {
   color: gainsboro;
-  font-size: 15px;
 }
-
 
 
 /* general */
@@ -101,11 +105,15 @@ h3 {
   margin: 0;
 }
 
-.about, .skills, .education, .work, .portfolio, .contact {
-  text-align: justify;
+.about, .skills, .work, .projects, .contact {
+  /* text-align: justify; */
+  text-align: initial;
   margin-bottom: 50px;
 }
 
+.about p, .education p, .work p, .projects p, .skills p, .contact p {
+  font-size: 17px;
+}
 
 
 /* Skills section */
@@ -121,9 +129,9 @@ h3 {
   width: 45%;
   border: 2px solid rgb(112, 104, 95);
   border-radius: 5px;
-  font-size: 15px;
   padding: 20px;
   margin: 10px 30px 10px 0;
+  font-size: 17px;
 }
 
 .skills .row div:nth-child(even) {
@@ -138,31 +146,35 @@ h3 {
 
 
 
-/* general */
+/* education, general */
 .education .col-lg-4,
 .work .col-lg-4 {
   padding-left: 0;
-  text-align: justify;
+  /* text-align: justify; */
+  text-align: initial;
 }
 
 .education .col-lg-8,
 .work .col-lg-8 {
   padding-right: 0;
-  text-align: justify;
+  /* text-align: justify; */
+  text-align: initial;
 }
+
+.education p, .work p {
+  margin: 0 0 20px;
+}
+
+.education { 
+  margin-bottom: 30px !important;
+}
+
 
 
 /* Work section */
-.work .row .col-lg-4,
-.work .row .col-lg-8 {
-  margin-bottom: 30px;
+.work { 
+  margin-bottom: 30px !important;
 }
-
-.work .row .col-lg-4:nth-child(5),
-.work .row .col-lg-8:nth-child(6) {
-  margin-bottom: 0;
-}
-
 .work .row ul {
   margin: 0;
   list-style-position: outside;
@@ -176,44 +188,45 @@ h3 {
 
 .work ul li {
   display: list-item;
+  font-size: inherit;
 }
 
 
 
-/* Portfolio section */
-.portfolio .row { 
+/* Projects section */
+.projects .row { 
   margin: 0;
   display: flex;
   flex-direction: row;
 }
 
-.portfolio .row div {
+.projects .row div {
   flex: 1 1 auto;
   margin: 20px 25px 10px 0;
   width: 45%;
 }
 
-.portfolio .row div:nth-child(even) {
+.projects .row div:nth-child(even) {
   flex: 1 1 auto;
   margin-right: 0 !important;
   margin-bottom: 10px;
   width: 47%;
 }
 
-.portfolio .row div:nth-child(3),
-.portfolio .row div:nth-child(even) {
+.projects .row div:nth-child(3),
+.projects .row div:nth-child(even) {
   margin-bottom: 0;
 }
 
-.portfolio h4 {
+.projects h4 {
   color: #121212;
 }
 
-.portfolio p {
+.projects p {
   color: rgb(56, 54, 54);
 }
 
-.portfolio .row a.btn {
+.projects .row a.btn {
   border-radius: 10px 8px 5px; 
   padding: 8px; 
   margin-top: 10px;
@@ -223,10 +236,6 @@ h3 {
 
 
 /* Contact area */
-.contact p {
-  font-size: 16px;
-}
-
 .contact p a {
   font-weight: 600;
   position:inherit; 
@@ -239,7 +248,7 @@ h3 {
 
 .contact input,
 textarea {
-  width: 70em;
+  width: 100%;
   border-radius: 8px;
 }
 
@@ -294,7 +303,7 @@ textarea {
 
 /* Footer */
 .footer {
-  font-size: 12px;
+  font-size: 14px;
   padding: 6px;
   border-top: 1px dashed ghostwhite;
 }
@@ -354,7 +363,7 @@ textarea {
     margin: 6px 0 10px;
   }
 
-  .about, .skills, .education, .work, .portfolio, .contact {
+  .about, .skills, .education, .work, .projects, .contact {
     text-align: left;
     margin-bottom: 20px;
   }
@@ -386,17 +395,17 @@ textarea {
     left: -35px;
   }
 
-  .portfolio .row div {
+  .projects .row div {
     width: 100%;
     margin: 15px 0;
     padding: 15px !important;
   }
 
-  .portfolio .row div h4 {
+  .projects .row div h4 {
     font-size: 16px;
   }
 
-  .portfolio .row div p {
+  .projects .row div p {
     font-size: 0.7rem;
   }
 
@@ -406,5 +415,15 @@ textarea {
 
   .contact h2 {
     font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) 
+{
+  .about p, .education p, .projects p {
+    font-size: 14px;
+  }
+  .skills .row div {
+    padding: 12px;
   }
 }
