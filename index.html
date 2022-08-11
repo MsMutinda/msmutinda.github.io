@@ -25,10 +25,10 @@
             
             <nav class='nav-right'>
                 <ul>
-                    <li class='box'> <a href="#">Home</a> </li>
-                    <li class='box'> <a href='#about'>Profile</a> </li>
-                    <li class='box'> <a href='#resume'>Resume</a> </li>
-                    <li class='box'> <a href='#portfolio'>Portfolio</a></li>
+                    <li class='box'> <a href="#">About Me</a> </li>
+                    <li class='box'> <a href='#skills'>Skills</a> </li>
+                    <li class='box'> <a href='#education'>Education</a> </li>
+                    <li class='box'> <a href='#projects'>My Projects</a></li>
                     <li class='box'> <a href='#contact'>Contact</a> </li>
                 </ul>
             </nav>
@@ -54,7 +54,7 @@
                 </p>
             </div>
                     
-            <div class='skills'>
+            <div class='skills' id="skills">
                 <h3 class="skills-header">Skills Highlight</h3>
                 <hr />
                 <div class='row'>
@@ -72,7 +72,7 @@
                 </div>
             </div>
 
-            <div class='education'>
+            <div class='education' id="education">
                 <h3>Education</h3>
                 <hr />
                 <div class='row'>
@@ -255,11 +255,29 @@
                 </ul>
             </div>
 
+            <!-- Back to top button -->
+            <a id="button"><i class="fa fa-arrow-up"></i></a>
+
             <div class='footer text-center'> Copyright &copy; <script> document.write(new Date().getFullYear());</script> Juliet Mutinda. All Rights Reserved. </div>
         </div>
 
 
         <script type="text/javascript">
+            // back to top button
+            var btn = $('#button');
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 300) {
+                    btn.addClass('show');
+                } else {
+                    btn.removeClass('show');
+                }
+            });
+            btn.on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({scrollTop:0}, 1000);
+            });
+
+
             $(function() { 
                 toastr.options.timeOut = 5000;
 
