@@ -33,6 +33,11 @@ label {
   font-size: 17px !important;
 }
 
+.toast, #toast-container > div {
+  opacity: 1 !important;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: alpha(opacity=100);
+}
 
 .navbar {
   padding: 20px;

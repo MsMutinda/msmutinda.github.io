@@ -10,6 +10,13 @@
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link href="home.css" rel="stylesheet">
         <title>Juliet Mutinda</title>
+        <!-- Jquery JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- Toastr css & js -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <!-- for validation of data sent via the contact form -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     </head>
 
     <body>
@@ -227,14 +234,14 @@
                 <!-- <p>Click <a href='https://docs.google.com/forms/d/e/1FAIpQLSfz7quQ7tgXS-QMxa5-_PiIcEPmK8nLi2bC-NM--FAlJtHCTw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;'> here </a> to send me a message. </p> <br> -->
                  
                 <!-- <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" id='emailform' method="POST"> <br><br> -->
-                <form id='emailform'> <br><br>
+                <form name="emailform" id='emailform' method="POST"> <br><br>
                     <!-- <?php echo(!empty($errorMessage) ? $errorMessage : '') ?> -->
                     <label for='name'>Your Name </label> <br>
-                        <input type='text' name='sendername' id="sendername" style='padding: 15px;'><br><br>
+                        <input type='text' name='sendername' id="sendername" placeholder="Enter your name" style='padding: 15px;' required><br><br>
                     <label for='senderemail'>Your Email </label> <br>
-                        <input type='email' name='senderemail' id="senderemail" style='padding: 18px;'><br><br>
+                        <input type='email' name='senderemail' id="senderemail" placeholder="Enter your email address" style='padding: 18px;' required><br><br>
                     <label for='sendermessage'>Your Message </label> <br>
-                        <textarea name='sendermessage' rows='8' id="sendermessage"></textarea> <br><br>
+                        <textarea name='sendermessage' rows='5' id="sendermessage" placeholder="Enter the message you wish to send" required></textarea> <br><br>
                     <input type='submit' name='submit' id="submitBtn" value='Submit' class='in' style='width: 65px; padding: 4px;'>   
                 </form>   
 
@@ -251,25 +258,21 @@
             <div class='footer text-center'> Copyright &copy; <script> document.write(new Date().getFullYear());</script> Juliet Mutinda. All Rights Reserved. </div>
         </div>
 
-        <!-- Jquery JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <!-- Toastr js -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-        <!-- for validation of data sent via the contact form -->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
 
         <script type="text/javascript">
             $(function() { 
+                toastr.options.timeOut = 5000;
+
                 $("#emailform").submit(function(event) {
                     event.preventDefault();  // Prevent default posting of form in case of errors
 
-                    var formdata = {
+                    var postdata = {
                         name: $('#sendername').val(),
                         email: $('#senderemail').val(),
                         message: $('#sendermessage').val()
                     };
-                    
-                    var errors = validate(formdata);
+
+                    var errors = validate(postdata);
                     
                     if (errors) {
                         const errorMessage = Object.values(errors).map(function (fieldValues) { 
@@ -279,18 +282,34 @@
                     }
                     else {
                         $.ajax({
-                            url: '/email.php',
+                            //url: '/email.php',
+                            //url: '//formspree.io/mutindajulie2@gmail.com',
+                            url: 'https://formspree.io/f/xoqpgkjj',
                             type: "post",
-                            data: formdata
-                        }).done(function(response, textStatus, jqXHR) {
-                            if(textStatus == 'success') {
+                            data: $('#emailform').serialize(),
+                            dataType: 'json'
+                        })
+                        .done(function(response) {
+                            if(response.ok) {
+                                //console.log(response);
                                 $("#emailform")[0].reset();  //clear form fields
-                                //toastr.success('Thank you for your message!');
-                                alert('Thank you for your message!');
+                                toastr.success('Thank you for stopping by! I will get back to you as soon as i can');
+                                window.scrollTo(0,0);
                             }
-                        }).fail(function(jqXHR, textStatus, errorThrown) {
-                            alert(errorThrown);
+                        })
+                        .fail(function(response) {
+                            toastr.error('Something went wrong with your submission, please try again later');
                         });
+                        // .done(function(response, textStatus, jqXHR) {
+                        //     if(textStatus == 'success') {
+                        //         $("#emailform")[0].reset();  //clear form fields
+                        //         //toastr.success('Thank you for your message!');
+                        //         alert('Thank you for your message!');
+                        //     }
+                        // })
+                        // .fail(function(jqXHR, textStatus, errorThrown) {
+                        //     alert(errorThrown);
+                        // });
                     }
                 });
             });

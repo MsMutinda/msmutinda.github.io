@@ -1,12 +1,14 @@
 <?php
-    if(!empty($_POST)) { 
+print_r($_REQUEST);
+
+    if(!empty($_REQUEST)) { 
         $errors = [];  
         $errorMessage = '';  
 
         //collect form data
-        $name = htmlspecialchars($_POST['name']);
-        $sender_email = htmlspecialchars($_POST['email']);
-        $message = htmlspecialchars($_POST['message']);
+        $name = htmlspecialchars($_REQUEST['name']);
+        $sender_email = htmlspecialchars($_REQUEST['email']);
+        $message = htmlspecialchars($_REQUEST['message']);
 
         //validate
         if(empty($name)) {
@@ -32,18 +34,15 @@
         else {  //where there were no validation errors
             //set variables
             $email_subject = "Portfolio website message";
-            $email_body = "New message from $name \n";
-                        "Email address: $sender_email \n";
+            $email_body = "New message from: $name \n";
+                        "Email address: <$sender_email> \n";
                         "Message: $message";
-            $to = 'mutindajulie2@gmail.com';
-            $headers = "From $sender_email \r\n";
+            $to = '<mutindajulie2@gmail.com>';
+            $headers = "From <$sender_email> \r\n";
 
-            //send email & get response
-            $sendemail = mail($to, $email_subject, $email_body, $headers);
-            print_r($sendemail);
-
-            if($sendemail) {
-                echo 'Success: sent successfully!';
+            //send email
+            if(mail($to, $email_subject, $email_body, $headers)) {
+                echo 'Success: Message sent successfully!';
                 //clear the form
                 //unset($name, $sender_email, $message);
                 //redirect
@@ -51,7 +50,7 @@
                 //exit();
             }
             else {
-                echo 'Error: sent successfully!';
+                echo 'Error: failed, please try again later';
             }
         }
 
