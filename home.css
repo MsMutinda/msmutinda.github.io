@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Mulish:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
 
 body {
   background-color: #0e2433;
   overflow-x: hidden;
-  font-family: "Livvic", sans-serif;
+  font-family: "Mulish", sans-serif;
   font-weight: 300;
   color: gainsboro;
 }
@@ -165,20 +165,19 @@ label {
 }
 
 .skills .row div {
-  flex: 1 1 auto;
+  flex: 0 1 auto; /* flex-grow, flex-shrink, flex-basis */
   margin: 20px 25px 10px 0;
-  width: 45%;
+  width: 32%;
   border: 2px solid rgb(112, 104, 95);
   border-radius: 5px;
   padding: 20px;
-  margin: 10px 30px 10px 0;
+  margin: 10px 20px 10px 0;
   font-size: 17px;
+  line-height: 23px;
 }
 
-.skills .row div:nth-child(even) {
-  flex: 1 1 auto;
+.skills .row div:nth-child(3n+3) { /* targets every 3rd element in this row */
   margin-right: 0 !important;
-  width: 47%;
 }
 
 .skills .skills-header {
@@ -248,15 +247,7 @@ label {
 }
 
 .projects .row div:nth-child(even) {
-  flex: 1 1 auto;
   margin-right: 0 !important;
-  margin-bottom: 10px;
-  width: 47%;
-}
-
-.projects .row div:nth-child(3),
-.projects .row div:nth-child(even) {
-  margin-bottom: 0;
 }
 
 .projects h4 {

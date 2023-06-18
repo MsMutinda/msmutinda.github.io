@@ -46,12 +46,9 @@
                 <h3>About me</h3>
                 <hr />
                 <p>
-                I am a self-motivated individual who can build software products customized to satisfy specific
-                client needs for optimal usage experience. Whenever necessary, i am always open to learning new concepts that will benefit both me and the people i am working with. 
-                One of my goals is to remain updated on the latest software trends and technologies. 
+                I am an experienced software developer with a strong background in the development, implementation, and testing of scalable and robust software applications. I am always looking to expand my knowledge in the tech space by staying up to date on industry trends and technologies. 
                 <br /><br />
-                What i am looking for: Opportunities where i can apply my technical expertise in the provision of useful solutions
-                that would help me and the people i'm working with remain at a competitive edge in our respective industries.
+                What i am looking for: Opportunities where i can leverage my skills and contribute to cutting-edge projects in a dynamic environment.
                 </p>
             </div>
                     
@@ -59,17 +56,18 @@
                 <h3 class="skills-header">Skills Highlight</h3>
                 <hr />
                 <div class='row'>
-                    <div>Building dynamic web applications using ASP.NET.</div>
-                    <div>Working with the Laravel and Django frameworks for web development. </div>
-                    <div> Working with programming technologies such as HTML, CSS,
-                        JavaScript, jQuery, and ajax. </div>
-                    <div> Version control and collaboration tools such as Git and Trello. </div>
-                    <div> Database manipulation using Microsoft SQL server, MySQL and Postgresql. </div>
-                    <!-- <div> Data processing and visualization using tools such as pandas, scikit-learn, matplotlib,
-                        beautiful soup, and numpy. </div> -->
-                    <div> Ability to coordinate a team towards achieving a set goal. </div>
-                    <div> Adaptable to changing situations. </div>
-                    <div>Strong communication skills. </div>
+                    <div class="col-md-4 col-sm-6">Building dynamic applications using HTML, CSS, Bootstrap, Tailwind, jQuery, Ajax, .NET, React js, Node js, & REST APIs.</div>
+                    <div class="col-md-4 col-sm-6">
+                        Database manipulation using Microsoft SQL server, MySQL and PostgreSQL.
+                    </div>
+                    <div class="col-md-4 col-sm-6"> Version control and collaboration tools such as Git, Trello, and ClickUp. </div>
+                    <div class="col-md-4 col-sm-6">
+                        React app deployment to GCP on nginx server.
+                    </div>
+                    <div class="col-md-4 col-sm-6">Working with the Laravel and Django frameworks for web development. </div>
+                    <div class="col-md-4 col-sm-6"> Ability to coordinate a team towards achieving a set goal. </div>
+                    <div class="col-md-4 col-sm-6"> Adaptable to changing situations. </div>
+                    <div class="col-md-4 col-sm-6">Strong communication skills. </div>
                 </div>
             </div>
 
@@ -89,7 +87,7 @@
                         <b>Software Developer, March - July 2022, <br> Africa Cloud Space LTD </b> 
                     </p>
                     <p class='col-lg-8 col-md-8 col-sm-8'>
-                        Designing, building, and testing web applications using ASP.NET.
+                        Designing, building, and testing web applications using .NET framework.
                     </p>
 
                     <p class='col-lg-4 col-md-4 col-sm-4'>
@@ -193,33 +191,36 @@
             <div class='projects' id='projects'>
                 <h3> Personal Accomplishments </h3>
                 <div class='row'>
+                    <!-- <div class='shadow-lg bg-light p-4 rounded col-md-4 col-sm-6'> -->
+                    <div class='shadow-lg bg-light p-4 rounded'>
+                        <h4>My portfolio</h4>
+                        <p>
+                            This is a web application that details the skills and competencies i have acquired throughout my learning and professional journey in software development so far. (What you're looking at🙂)
+                        </p>
+                        <a class="btn" href="https://github.com/MsMutinda/msmutinda.github.io.git"> 
+                            View code on github</a>
+                    </div>
+                    
+                    <!-- <div class='shadow-lg bg-light p-4 rounded col-md-4 col-sm-6'> -->
                     <div class='shadow-lg bg-light p-4 rounded'>
                         <h4> Company Website </h4>
                         <p>
-                            A web application for Hexagon Aviation LTD.
+                            A web application for Hexagon Aviation LTD, mainly using PHP.
                         </p>
-                        <a class="btn" href="https://www.hexagonaviation.com"> Link To website </a>
+                        <a class="btn" href="https://www.hexagonaviation.com"> Link to website </a>
                     </div>
 
+                    <!-- <div class='shadow-lg bg-light p-4 rounded col-md-4 col-sm-6'> -->
                     <div class='shadow-lg bg-light p-4 rounded'>
                         <h4> Django and Laravel blog </h4>
                         <p>
-                            Two separate blogging applications, one built using the laravel framework, the other using the django framework. The blogs incorporates different web technologies needed to make a web application work, such as Python, PHP, HTML, CSS, Javascript, Jquery, and ajax.
+                            Two separate blogging applications, one built using the laravel framework, the other using the django framework.
                         </p>
                         <a class="btn" href="https://github.com/MsMutinda/FirstBlogApp.git"> View project on github</a>
                     </div>
 
                     <div class='shadow-lg bg-light p-4 rounded'>
-                        <h4>My portfolio</h4>
-                        <p>
-                            This is a web application that details the skills and competencies i have acquired throughout my learning and professional journey in software development so far.
-                        </p>
-                        <a class="btn" href="https://github.com/MsMutinda/msmutinda.github.io.git"> 
-                            <!-- What you're looking at🙂<br /> -->
-                            View code on github</a>
-                    </div>
-
-                    <div class='shadow-lg bg-light p-4 rounded'>
+                    <!-- <div class='shadow-lg bg-light p-4 rounded col-md-4 col-sm-6'> -->
                         <h4>Covid Tracking app</h4>
                         <p>
                             A covid19-tracking application focused on one user story: the user being able to fill in and 
@@ -247,7 +248,7 @@
                 <!-- <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" id='emailform' method="POST"> <br><br> -->
                 <form name="emailform" id='emailform' method="POST"> <br><br>
                     <!-- <?php echo(!empty($errorMessage) ? $errorMessage : '') ?> -->
-                    <label for='name'>Your Name </label> <br>
+                    <label for='sendername'>Your Name </label> <br>
                         <input type='text' name='sendername' id="sendername" placeholder="Enter your name" style='padding: 15px;' required><br><br>
                     <label for='senderemail'>Your Email </label> <br>
                         <input type='email' name='senderemail' id="senderemail" placeholder="Enter your email address" style='padding: 18px;' required><br><br>
@@ -269,7 +270,7 @@
             <!-- Back to top button -->
             <a id="button"><i class="fa fa-arrow-up"></i></a>
 
-            <div class='footer text-center'> Copyright &copy; <script> document.write(new Date().getFullYear());</script> Juliet Mutinda. All Rights Reserved. </div>
+            <div class='footer text-center'> Copyright &copy; 2021 -  <script> document.write(new Date().getFullYear());</script> Juliet Mutinda. All Rights Reserved. </div>
         </div>
 
 
