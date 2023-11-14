@@ -78,6 +78,7 @@ label {
 .navbar {
   padding: 20px;
   margin: 0;
+  display: flex;
 }
 
 .nav-left a {
@@ -121,12 +122,6 @@ label {
   left: 2%;
 }
 
-.title h1 {
-  margin-top: 50px;
-  margin-bottom: 20px;
-  color: whitesmoke;
-}
-
 .title h5 {
   margin-bottom: 50px;
   font-size: 20px;
@@ -153,7 +148,7 @@ label {
 }
 
 .about p, .education p, .work p, .projects p, .skills p, .contact p {
-  font-size: 17px;
+  font-size: 15px;
 }
 
 
@@ -165,9 +160,9 @@ label {
 }
 
 .skills .row div {
-  flex: 0 1 auto; /* flex-grow, flex-shrink, flex-basis */
+  flex: 1 1 auto; /* flex-grow, flex-shrink, flex-basis */
   margin: 20px 25px 10px 0;
-  width: 32%;
+  width: 30%;
   border: 2px solid rgb(112, 104, 95);
   border-radius: 5px;
   padding: 20px;
@@ -176,9 +171,10 @@ label {
   line-height: 23px;
 }
 
-.skills .row div:nth-child(3n+3) { /* targets every 3rd element in this row */
+/* targets every 3rd element in this row */
+/* .skills .row div:nth-child(3n+3) { 
   margin-right: 0 !important;
-}
+} */
 
 .skills .skills-header {
   margin-bottom: 0;
@@ -216,7 +212,7 @@ label {
   margin-bottom: 50px !important;
 }
 .work .row ul {
-  margin: 0;
+  margin: 0 0 15px;
   list-style-position: outside;
   padding-left: 50px;
 }
@@ -341,7 +337,36 @@ textarea {
 }
 
 
+/* actively typing text */
+#typing-text {
+  font-family: 'Mulish', sans-serif;
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #000;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: whitesmoke;
+    /* animation: typing 1.5s steps(40, end), blink-caret 0.75s infinite; */
+}
 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000;
+  }
+}
 
 /* Responsiveness */
 @media screen and (min-width: 280px) and (max-width: 599px) 
@@ -379,11 +404,6 @@ textarea {
     right: 10px;
     top: 30px;
     margin-bottom: 70px;
-  }
-
-  .title h1 {
-    margin: 0;
-    font-size: 24px;
   }
 
   .title h5 {
