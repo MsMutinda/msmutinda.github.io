@@ -1,10 +1,11 @@
 # My Portfolio Site😀!!
 
-### I have created a portfolio to showcase my skills and projects. To achieve this, I made use of the following:
+### This site showcases my skills and projects worked on. 
+### Technologies used:
 - PHP
 - Javascript
 - Bootstrap
 
 
-### Check it out on: msmutinda.github.io
-### The app is fully responsive on different screen widths.
+#### Check it out via: msmutinda.github.io
+#### The app is fully responsive on different screen widths.
